@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Button, Htag, Paragraph } from "../components/";
+import { Button, Htag, Paragraph, Tag } from "../components/";
 
 export default function Home(): JSX.Element {
   return (
@@ -18,6 +18,9 @@ export default function Home(): JSX.Element {
       <Paragraph size="l">
         Большой
       </Paragraph>
+      <Tag color="red" size="m">Red</Tag>
+      <Tag color="primary" size="l">primary</Tag>
+      <Tag color="grey" href="yandex.ru">grey</Tag>
     </div>
   );
 }

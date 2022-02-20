@@ -1,0 +1,17 @@
+.paragraph {
+  line-height: 24px;
+  margin:0;
+}
+
+.m {
+  font-size: 16px;
+}
+
+.s {
+  font-size: 14px;
+}
+
+.l {
+  font-size: 18px;
+  line-height: 29px;
+}

@@ -1,7 +1,10 @@
 import { ILayout } from "./Layout.props";
 import styles from "./Layout.module.css";
-import { Footer, Header, Sidebar } from "../components";
 import { FunctionComponent } from "react";
+import { AppContextProvider, IAppContex } from "../context/app.context";
+import { Header } from "./Header/Header";
+import { Sidebar } from "./Sidebar/Sidebar";
+import { Footer } from "./Footer/Footer";
 
 const Layout = ({ children }: ILayout): JSX.Element => {
   return (
@@ -14,14 +17,16 @@ const Layout = ({ children }: ILayout): JSX.Element => {
   );
 };
 
-export const withLayout = <T extends Record<string, unknown>>(
+export const withLayout = <T extends Record<string, unknown> & IAppContex>(
   Component: FunctionComponent<T>
 ) => {
   return function withLayoutComponent(prpos: T): JSX.Element {
     return (
-      <Layout>
-        <Component {...prpos} />
-      </Layout>
+      <AppContextProvider menu={prpos.menu} firsCategory={prpos.firsCategory}>
+        <Layout>
+          <Component {...prpos} />
+        </Layout>
+      </AppContextProvider>
     );
   };
 };

@@ -4,18 +4,18 @@ import { TopLevelCategory } from "../interfaces/page.interface";
 
 export interface IAppContex {
   menu: MenuItem[];
-  firsCategory?: TopLevelCategory;
+  firstCategory?: TopLevelCategory;
   setMenu?: (newMenu: MenuItem[]) => void;
 }
 
 export const AppContext = createContext<IAppContex>({
   menu: [],
-  firsCategory: TopLevelCategory.Courses,
+  firstCategory: TopLevelCategory.Courses,
 });
 
 export const AppContextProvider = ({
   menu,
-  firsCategory,
+  firstCategory,
   children,
 }: PropsWithChildren<IAppContex>): JSX.Element => {
   const [menuState, setMenuState] = useState<MenuItem[]>(menu);
@@ -24,7 +24,7 @@ export const AppContextProvider = ({
   };
 
   return (
-    <AppContext.Provider value={{ menu: menuState, firsCategory, setMenu }}>
+    <AppContext.Provider value={{ menu: menuState, firstCategory, setMenu }}>
       {children}
     </AppContext.Provider>
   );

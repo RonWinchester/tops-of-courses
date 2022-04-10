@@ -22,7 +22,7 @@ export const withLayout = <T extends Record<string, unknown> & IAppContex>(
 ) => {
   return function withLayoutComponent(prpos: T): JSX.Element {
     return (
-      <AppContextProvider menu={prpos.menu} firsCategory={prpos.firsCategory}>
+      <AppContextProvider menu={prpos.menu} firstCategory={prpos.firstCategory}>
         <Layout>
           <Component {...prpos} />
         </Layout>

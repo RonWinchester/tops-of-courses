@@ -28,8 +28,8 @@
 }
 
 
-@media screen and (max-width: 765px) {
-  .sidebar {
+@media screen and (max-width: 768px) {
+  .wrapper .sidebar {
     display: none;
   }
   .header {

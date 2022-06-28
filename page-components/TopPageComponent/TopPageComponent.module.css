@@ -1,13 +1,9 @@
 .title {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  align-items: baseline;
+  align-items: center;
   justify-items: left;
   gap: 20px;
-}
-
-.wrapper {
-  margin-top: 40px;
 }
 
 .hhTitle {
@@ -16,4 +12,52 @@
   align-items: baseline;
   justify-items: left;
   gap: 20px;
+  margin-bottom: 25px;
+}
+
+.next {
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.nextBtn {
+  color: cornflowerblue;
+  background: none;
+  border: none;
+  outline: 1px solid;
+  border-radius: 5px;
+  padding: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.nextBtn:hover {
+  color: var(--green);
+}
+
+.seo h1 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.seo h2 {
+  margin: 0px;
+  margin-top: 50px;
+
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.seo h3 {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
 }

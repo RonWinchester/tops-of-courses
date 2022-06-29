@@ -7,10 +7,12 @@ import {
   HhData,
   Htag,
   Paragraph,
+  Sort,
   Tag,
 } from "../../components";
 import { TopLevelCategory } from "../../interfaces/page.interface";
 import React from "react";
+import { SortEnum } from "../../components/Sort/Sort.props";
 
 export const TopPageComponent = ({
   page,
@@ -28,7 +30,7 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <span>Sort</span>
+       <Sort sort={SortEnum.Rating} setSort={()=>{}}/>
       </div>
       <div>
         {products && products.map((p) => <div key={p._id}>{p.title}</div>)}

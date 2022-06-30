@@ -22,7 +22,7 @@ export const Sort = ({
       </span>
       <span
         onClick={() => {
-          setSort(SortEnum.Rating);
+          setSort(SortEnum.Price);
         }}
         className={cn({ [styles.active]: sort == SortEnum.Price })}
       >

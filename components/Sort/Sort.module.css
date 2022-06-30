@@ -9,8 +9,9 @@
 
 .sort {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   gap: 40px;
+  justify-items: self-end;
 }
 
 .sort span {

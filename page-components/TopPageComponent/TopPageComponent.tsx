@@ -27,7 +27,11 @@ export const TopPageComponent = ({
 
   const setSort = (sort: SortEnum) => {
     dispatchSort({type: sort})
-  }
+  };
+
+  useEffect(() => {
+		dispatchSort({ type: 'reset', initialState: products });
+	}, [products]);
   return (
     <div className={cn(styles.wrapper)}>
       <div className={cn(styles.title)}>
@@ -40,7 +44,7 @@ export const TopPageComponent = ({
        <Sort sort={sort} setSort={setSort}/>
       </div>
       <div>
-        {sortProducts && products.map((p) => <div key={p._id}>{p.title}</div>)}
+        {sortProducts && sortProducts.map((p) => <div key={p._id}>{p.title}</div>)}
       </div>
       <div className={cn(styles.hhTitle)}>
         <Htag tag="h2">Вакансии - {page.category}</Htag>

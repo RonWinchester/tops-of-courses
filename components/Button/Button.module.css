@@ -21,7 +21,7 @@
 
 .primary:hover {
   color: var(--black);
-  border: 1px solid var(--gray-light);
+  outline: 1px solid var(--gray-light);
   background: none;
 }
 

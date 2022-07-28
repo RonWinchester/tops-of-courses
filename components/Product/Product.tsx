@@ -3,7 +3,7 @@ import styles from "./Product.module.css";
 import cn from "classnames";
 import { Card } from "../Card/Card";
 import { Rating } from "../Rating/Rating";
-import { Button, Divider, Review, Tag } from "..";
+import { Button, Divider, Review, ReviewForm, Tag } from "..";
 import { declOfNum, priceRu } from "../../helpers/helpers";
 import Image from "next/image";
 import { useState } from "react";
@@ -100,8 +100,12 @@ export const Product = ({
         })}
       >
         {product.reviews.map(r => (
-          <Review key={r._id} review={r} />
+          <>
+            <Review key={r._id} review={r} />
+            <Divider/>
+          </>
         ))}
+        <ReviewForm productId={product._id}></ReviewForm>
       </Card>
     </>
   );

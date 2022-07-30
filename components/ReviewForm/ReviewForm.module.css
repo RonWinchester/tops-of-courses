@@ -25,6 +25,18 @@
   gap: 20px;
 }
 
+.error {
+  background: var(--red-light);
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.error .close path {
+  stroke: var(--red);
+}
+
 .success {
   background: var(--green-light);
   padding: 20px;

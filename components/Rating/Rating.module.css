@@ -1,5 +1,5 @@
 .filled {
-  fill: var(--primary);
+  fill: var(--primary) !important;
 }
 
 .editable {
@@ -9,4 +9,20 @@
 .star {
   padding-right: 5px;
   box-sizing: content-box;
+}
+
+.error svg {
+  stroke: var(--red);
+}
+
+.ratingWrapper {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: var(--red);
+  font-size: 12px;
 }

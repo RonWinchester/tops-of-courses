@@ -11,8 +11,25 @@
   font-size: 16px;
   line-height: 22px;
   font-family: var(--font-family);
+  width: 100%;
 }
 
 .input::placeholder {
-  color: var(--gray)
+  color: var(--gray);
+}
+
+.error {
+  border: 1px solid var(--red);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: var(--red);
+  font-size: 12px;
 }

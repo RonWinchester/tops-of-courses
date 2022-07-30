@@ -20,8 +20,6 @@ export const Rating = forwardRef(
       new Array(5).fill(<></>)
     );
 
-    console.log(error);
-
     const changeDisplay = (i: number) => {
       isEditable && constructRating(i);
     };

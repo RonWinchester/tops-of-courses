@@ -5,6 +5,7 @@ import { AppContextProvider, IAppContex } from "../context/app.context";
 import { Header } from "./Header/Header";
 import { Sidebar } from "./Sidebar/Sidebar";
 import { Footer } from "./Footer/Footer";
+import { Up } from "../components";
 
 const Layout = ({ children }: ILayout): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ children }: ILayout): JSX.Element => {
       <Sidebar className={styles.sidebar} />
       <main className={styles.main}>{children}</main>
       <Footer className={styles.footer} />
+      <Up />
     </div>
   );
 };

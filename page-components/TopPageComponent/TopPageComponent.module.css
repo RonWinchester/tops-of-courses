@@ -67,3 +67,9 @@
   font-weight: 600;
   line-height: 27px;
 }
+
+@media screen and (max-width: 768px) {
+	.title {
+		grid-template-columns: auto 1fr;
+	}
+}

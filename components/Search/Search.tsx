@@ -6,6 +6,7 @@ import { Button } from "../Button/Button";
 import { useState } from "react";
 import SerachIcon from "./search.svg";
 import { useRouter } from "next/router";
+import { ButtonIcon } from "../ButtonIcon/ButtonIcon";
 
 export const Search = ({ className, ...props }: ISearch): JSX.Element => {
   const [search, setSearch] = useState<string>("");
@@ -37,15 +38,9 @@ export const Search = ({ className, ...props }: ISearch): JSX.Element => {
         }}
         onKeyDown={handleKeyDown}
       />
-      <Button
-        appearance={"primary"}
-        className={styles.button}
-        onClick={() => {
+      <ButtonIcon className={styles.button} appearance='primary' icon='search' onClick={() => {
           goToSerach();
-        }}
-      >
-        <SerachIcon />
-      </Button>
+        }}/>
     </div>
   );
 };

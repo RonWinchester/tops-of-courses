@@ -27,7 +27,6 @@
   grid-area: footer;
 }
 
-
 @media screen and (max-width: 768px) {
   .wrapper .sidebar {
     display: none;
@@ -41,7 +40,8 @@
     grid-template-areas:
       "header"
       "body"
-      "footer"
+      "footer";
+      gap: 10px;
   }
 
   .main {

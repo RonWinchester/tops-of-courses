@@ -8,13 +8,11 @@
   padding-right: 40px;
 }
 
-.button {
+.search .button {
   position: absolute;
-  right: 3px;
-  top: 3px;
-
-  height: 30px;
-  width: 30px;
-
+  right: 0px;
+  top: 0px;
+  height: 35px;
+  width: 35px;
   padding: 7px;
 }

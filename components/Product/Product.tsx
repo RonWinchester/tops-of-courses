@@ -23,6 +23,24 @@ const scrollToreview = () => {
   })
 }
 
+const variants = {
+  visible: {
+    height: "auto",
+    overflow: "inherit",
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1
+    }
+  },
+  hidden: {
+    height: 0,
+    padding: 0,
+    overflow: "hidden",
+    opacity: 0
+  }
+}
+
   return (
     <div className={className} {...props} ref={ref}>
       <Card className={styles.product}>
@@ -102,22 +120,25 @@ const scrollToreview = () => {
           </Button>
         </div>
       </Card>
-      <Card
-        color="blue"
-        className={cn(styles.reviews, {
-          [styles.opened]: isReviewOpened,
-          [styles.closed]: !isReviewOpened,
-        })}
-        ref={reviewRef}
+      <motion.div
+      variants={variants}
+      initial={'hidden'}
+      animate={isReviewOpened ? 'visible' : 'hidden'}
       >
-        {product.reviews.map(r => (
-          <div key={r._id}>
-            <Review review={r} />
-            <Divider/>
-          </div>
-        ))}
-        <ReviewForm productId={product._id}></ReviewForm>
-      </Card>
+        <Card
+          color="blue"
+          className={cn(styles.reviews)}
+          ref={reviewRef}
+        >
+          {product.reviews.map(r => (
+            <div key={r._id}>
+              <Review review={r} />
+              <Divider/>
+            </div>
+          ))}
+          <ReviewForm productId={product._id}></ReviewForm>
+        </Card>
+      </motion.div>
     </div>
   );
 }));

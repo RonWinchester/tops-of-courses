@@ -21,6 +21,7 @@ const scrollToreview = () => {
     behavior: "smooth",
     block: "start"
   })
+  reviewRef.current?.focus();
 }
 
 const variants = {
@@ -129,6 +130,7 @@ const variants = {
           color="blue"
           className={cn(styles.reviews)}
           ref={reviewRef}
+          tabIndex={isReviewOpened ? 0 : -1}
         >
           {product.reviews.map(r => (
             <div key={r._id}>
@@ -136,7 +138,7 @@ const variants = {
               <Divider/>
             </div>
           ))}
-          <ReviewForm productId={product._id}></ReviewForm>
+          <ReviewForm isOpend={isReviewOpened} productId={product._id}></ReviewForm>
         </Card>
       </motion.div>
     </div>

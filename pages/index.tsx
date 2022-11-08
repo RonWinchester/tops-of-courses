@@ -11,25 +11,8 @@ function Home({ menu }: HomeProps): JSX.Element {
 
   return (
     <>
-      <Htag tag="h1">Текст</Htag>
-      <Button appearance={"primary"} arrow="right">
-        Кнопка
-      </Button>
-      <Paragraph size="s">Маленький</Paragraph>
-      <Paragraph>Средний</Paragraph>
-      <Paragraph size="l">Большой</Paragraph>
-      <Tag color="red" size="m">
-        Red
-      </Tag>
-      <Tag color="primary" size="l">
-        primary
-      </Tag>
-      <Tag color="grey" href="yandex.ru">
-        grey
-      </Tag>
-      <Rating rating={state} isEditable={true} setRating={useState}></Rating>
-      <Input placeholder="Введите текст"/>
-      <Textarea />
+      <Htag tag="h1">Next + TS</Htag>
+      <Paragraph size="l">Цены на сайте случайны, не является публичной офертой и бла бла бла.</Paragraph>
     </>
   );
 }

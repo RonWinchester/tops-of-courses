@@ -36,7 +36,7 @@ export const Search = ({ className, ...props }: ISearch): JSX.Element => {
         onChange={(e) => {
           setSearch(e.target.value);
         }}
-        onKeyDown={handleKeyDown}
+        onKeyDown={()=>handleKeyDown}
       />
       <ButtonIcon className={styles.button} appearance='primary' icon='search' onClick={() => {
           goToSerach();

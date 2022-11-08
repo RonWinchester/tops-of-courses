@@ -10,3 +10,9 @@
 * HTMl
 * CSS
 * NextJS
+
+## To-Do
+1. Сделать поиск
+2. Главная страница
+
+https://tops-of-courses.vercel.app
